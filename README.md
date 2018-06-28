@@ -10,13 +10,13 @@ Configure Linux web server with Amazon Lightsail and deploy python web applicati
 
 ## server configuration
 
-### 1. Create instance from AWS
+### 1. Create an instance from AWS
 
 - goto Amazon Lightsail webpage
-- create instance : choose option Linux platform, os only/ubuntu
-- download deault private ssh key from account page
+- create an instance: choose option Linux platform, os only/ubuntu
+- download default private ssh key from the account page
 
-### 2. Connect to server with terminal
+### 2. Connect to the server with terminal
 - open terminal
 - place downloaded .pem file into ~/.ssh `$cp catalog.pem ~/.ssh`
 - change the access permissions of .pem file `$ chmod 600 ~/.ssh/catalog.pem`
@@ -33,7 +33,7 @@ Configure Linux web server with Amazon Lightsail and deploy python web applicati
 $sudo apt-get update
 $sudo apt-get upgrade
 ```
-- install finger to checek user grader `$ sudo apt-get install finger`
+- install finger to check user grader `$ sudo apt-get install finger`
 - check user 'grader' `$finger grader`
 
 ### 4. Create SSH key
@@ -82,8 +82,8 @@ $ sudo ufw enable
 
 ### 1. install apache
 - install apache `$ sudo apt-get install apache2`
-- to check installation, type public ip in the browser  
-Browser will display the apache ubuntu default page
+- to check the installation, type public ip in the browser  
+The browser will display the apache ubuntu default page
 
 
 ### 2. install mod_wsgi and enable
@@ -126,7 +126,7 @@ Save and close the file.
 - create a virtual environment for flask application  
 Setting up a virtual environment will keep the application and its dependencies isolated from the main system.  
 - install pip `$ sudo apt-get install python-pip`
-- use pip to install virtualenv and Flask then activate virtual enviroment
+- use pip to install virtualenv and Flask then activate virtual environment
 ```
  $ sudo pip install virtualenv
  $ sudo virtualenv venv
@@ -188,7 +188,7 @@ from FlaskApp import app as application
 application.secret_key = 'super_secret_key'
 ```
 
-- now directory structure look like this  
+- now directory structure should look like this  
 |--------catalog  
 |----------------catalog  
 |-----------------------static  
@@ -204,7 +204,7 @@ application.secret_key = 'super_secret_key'
 - place 'catalog' directory under /www/var/catalog/catalog 
 - delete \_\_init\_\_.py then rename application.py to \_\_init\_\_.py
 
-now directory look like this:  
+now directory should look like this:  
 |----catalog  
 |---------catalog  
 |--------------static  
@@ -236,7 +236,7 @@ $ sudo pip install flask-seasurf
 from `sqlite://catalog.db` to 
 `create_engine('postgresql://catalog:catalog-pw@localhost/catalog')`
 
-connect to psql
+connect to the psql
 ```
 $ sudo su - postgres
 $ psql
